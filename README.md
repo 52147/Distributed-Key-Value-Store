@@ -21,28 +21,35 @@ This is a simple implementation of a distributed key-value store in Java. The sy
 3. The client can now send `PUT`, `GET`, and `DELETE` operations to the server. Each operation is sent as a `Message` object. The server responds to each operation with a message, and the client prints out the response it received.
 
 Note: The server can handle multiple client connections concurrently.
+## How to Run
+First, compile the code with your favorite Java compiler. The main class to run is org.distributed.Main.
 
-## Example
-
-Start the server:
-
+Next, start the server (Node). You should see output indicating that the server has started:
+```
 Server started on port 6000
-
-Start the client and send a `PUT` operation:
+```
+Then, start the client. The client will automatically send a PUT operation, followed by a GET and a DELETE operation.
+### Example
+Here's an example session of running the client and server:    
+1. Start the server:
+```
+Server started on port 6000
+```
+2. Start the client and send a PUT operation:
+```
 Sent message: Message{key='key1', value='value1', operation='PUT'}
 Received response: Message{key='key1', value='null', operation='RESPONSE'}
-
-
-Send a `GET` operation:
-
+```
+3. Send a GET operation:
+```
 Sent message: Message{key='key1', value='null', operation='GET'}
 Received response: Message{key='key1', value='value1', operation='RESPONSE'}
-
-
-Send a `DELETE` operation:
-
+```
+4. Send a DELETE operation:
+```
 Sent message: Message{key='key1', value='null', operation='DELETE'}
 Received response: Message{key='key1', value='null', operation='RESPONSE'}
+```
 
 
 
@@ -57,3 +64,13 @@ This project demonstrates some of the fundamental concepts of distributed system
 3. **Data Storage and Retrieval**: The key-value store allows for simple data storage and retrieval operations. While this implementation is quite simple, it can be extended to include more complex data structures and operations.
 
 Overall, this project provides a basic but powerful framework for understanding and building distributed systems. Further enhancements could include implementing advanced features like replication, sharding, consistency mechanisms, failure handling, and more.
+## Skills Demonstrated
+- Java programming
+- Network programming with Java sockets
+- Concurrency and multithreading in Java
+- Implementation and understanding of key-value stores
+- Understanding of distributed systems principles
+- Software design and architecture
+- Debugging and problem-solving
+- Testing and quality assurance
+- Documentation and presentation
